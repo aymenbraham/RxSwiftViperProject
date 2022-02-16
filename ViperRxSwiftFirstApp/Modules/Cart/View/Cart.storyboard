@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cart View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CartViewController" customModule="ViperRxSwiftFirstApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zGG-6x-uH8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cart" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oj-B2-mqE">
+                                        <rect key="frame" x="20" y="20" width="86" height="51"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="jnC-ZJ-fps"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="42"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NMR-4W-1si">
+                                        <rect key="frame" x="0.0" y="79" width="414" height="739"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Y6W-OH-hqX" id="F0s-1X-cQu"/>
+                                            <outlet property="delegate" destination="Y6W-OH-hqX" id="9EX-Wk-oaW"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="0oj-B2-mqE" firstAttribute="leading" secondItem="zGG-6x-uH8" secondAttribute="leading" constant="20" symbolic="YES" id="DJZ-jT-g5k"/>
+                                    <constraint firstItem="0oj-B2-mqE" firstAttribute="top" secondItem="zGG-6x-uH8" secondAttribute="top" constant="20" symbolic="YES" id="ILT-Sx-Zlj"/>
+                                    <constraint firstAttribute="trailing" secondItem="NMR-4W-1si" secondAttribute="trailing" id="NGy-MA-1PL"/>
+                                    <constraint firstItem="NMR-4W-1si" firstAttribute="top" secondItem="0oj-B2-mqE" secondAttribute="bottom" constant="8" id="Q7p-x4-KOZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="NMR-4W-1si" secondAttribute="bottom" id="edF-gN-zLL"/>
+                                    <constraint firstItem="NMR-4W-1si" firstAttribute="leading" secondItem="zGG-6x-uH8" secondAttribute="leading" id="ikC-EF-nHU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="zGG-6x-uH8" secondAttribute="bottom" id="8bk-Er-mXG"/>
+                            <constraint firstItem="zGG-6x-uH8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="beB-3M-dz4"/>
+                            <constraint firstItem="zGG-6x-uH8" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="c9g-sh-VLv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zGG-6x-uH8" secondAttribute="trailing" id="wks-0f-1eb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cartTableView" destination="NMR-4W-1si" id="4Jg-GI-IXr"/>
+                        <outlet property="titleLabel" destination="0oj-B2-mqE" id="0c4-lr-a6P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="35" y="86"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

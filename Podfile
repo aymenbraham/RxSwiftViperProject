@@ -10,6 +10,7 @@ target 'ViperRxSwiftFirstApp' do
     pod 'RxCocoa'
     pod 'Moya/RxSwift'
     pod 'ObjectMapper'
+    pod 'AlamofireImage', '~> 4.1'
 
   target 'ViperRxSwiftFirstAppTests' do
     inherit! :search_paths
